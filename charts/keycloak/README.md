@@ -79,8 +79,10 @@ Parameter | Description | Default
 `keycloak.startupScripts` | Custom startup scripts to run before Keycloak starts up | `[]`
 `keycloak.lifecycleHooks` | Container lifecycle hooks. Passed through the `tpl` function and thus to be configured a string | ``
 `keycloak.extraArgs` | Additional arguments to the start command | ``
+`keycloak.livenessProbe.enabled` | If `true`, liveness probes are enabled | `true`
 `keycloak.livenessProbe.initialDelaySeconds` | Liveness Probe `initialDelaySeconds` | `120`
 `keycloak.livenessProbe.timeoutSeconds` | Liveness Probe `timeoutSeconds` | `5`
+`keycloak.readinessProbe.enabled` | If `true`, readiness probes are enabled | `true`
 `keycloak.readinessProbe.initialDelaySeconds` | Readiness Probe `initialDelaySeconds` | `30`
 `keycloak.readinessProbe.timeoutSeconds` | Readiness Probe `timeoutSeconds` | `1`
 `keycloak.cli.enabled` | Set to `false` if no CLI changes should be performed by the chart | `true`
